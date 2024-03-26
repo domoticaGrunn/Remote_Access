@@ -1,6 +1,6 @@
 # Remote Access
 
-Presentatie gegeven tijdens de domoticaGRunn Meetup van 27 maart 2024 bij de [Maakplek](https://maakplek.nl) in Groningen.
+Presentatie gegeven tijdens de domoticaGrunn Meetup van 27 maart 2024 bij de [Maakplek](https://maakplek.nl) in Groningen.
 
 Voor deze presentatie is [Reveal.js](https://revealjs.com/installation/) gebruikt met de menu- en verticator plugin en een "custom theme".
 

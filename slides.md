@@ -2,12 +2,15 @@
 
 ---
 
-## Remote Access
-
+## Wat is het niet ...
 
 <p class="fragment" data-fragment-index="3">Human = Mens/Persoon</p>
 <p class="fragment" data-fragment-index="1">Presence = Aanwezigheid</p>
 <p class="fragment" data-fragment-index="2">Detection = Waarnemen</p>
+
+<!-- .slide: data-menu-title="Home Assistant" data-background-image="img/et_phone_home.gif" data-background-opacity="0.6" -->
+
+Note: Het "Mandela-effect" is het fenomeen waarbij we iets verkeerd onthouden en waarbij die fout zo hardnekkig is, dat ze zich als een nooit bestane herinnering in onze hersenen gaat nestelen. Drew Barrymore, wie heeft haar herkend? 1982: "E.T. home phone"
 
 --
 
