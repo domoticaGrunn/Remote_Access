@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Presence detection</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/domoticaGrunn-light.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+            <div class="slides">
+                <!-- Load your external MarkDown file -->
+                <section data-markdown="slides.md"
+                         data-separator="^\r?\n---\r?\n$"
+                         data-separator-vertical="^\r?\n--\r?\n$"
+                         data-separator-notes="^Note:"
+                         data-charset="iso-8859-15">
+                </section>
+            </div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/menu/menu.js"></script>
+        <script src="plugin/verticator/verticator.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+                center: false,
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+                transitionSpeed: 'slow',
+                backgroundTransition: 'fade', // none/fade/slide/convex/
+                menu: {
+                    // https://github.com/denehyg/reveal.js-menu
+                    side: 'left',
+                    width: 'normal',
+                    numbers: true,
+                    titleSelector: 'h1, h2, h3, h4, h5, h6',
+                    useTextContentForMissingTitles: true,
+                    hideMissingTitles: false,
+                    markers: true,
+                    custom: [
+                        { title: 'Links', icon: '<i class="fa fa-link">', src: 'menu-links.html' },
+                        { title: 'Info', icon: '<i class="fa fa-info">', src: 'menu-info.html' }],
+                    themes: [
+                        { name: 'domoticaGrunn-Dark', theme: 'dist/theme/domoticaGrunn-dark.css' },
+                        { name: 'domoticaGrunn-Light', theme: 'dist/theme/domoticaGrunn-light.css' }],
+                    themesPath: 'dist/theme/',
+                    transitions: true,
+                    openButton: false,
+                    keyboard: true,
+                    sticky: false,
+                    autoOpen: true,
+                    delayInit: false,
+                    openOnInit: false,
+                    loadIcons: true,
+                },
+                verticator: {
+                    themetag: 'h1', //h1, button
+                    color: '', //#00aaff
+                    inversecolor: '',
+                    skipuncounted: false,
+                    clickable: true,
+                    position: 'auto',
+                    offset: '3vmin',
+                    autogenerate: true,
+                    tooltip: 'auto',
+                    scale: 1,
+                    csspath: '',
+                },
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, Verticator]
+			});
+		</script>
+	</body>
+</html>
