@@ -2,192 +2,115 @@
 
 ---
 
-## Wat is het niet ...
+## Remote Access ?
 
-<p class="fragment" data-fragment-index="3">Human = Mens/Persoon</p>
-<p class="fragment" data-fragment-index="1">Presence = Aanwezigheid</p>
-<p class="fragment" data-fragment-index="2">Detection = Waarnemen</p>
-
-<!-- .slide: data-menu-title="Home Assistant" data-background-image="img/et_phone_home.gif" data-background-opacity="0.6" -->
+<!-- .slide: data-menu-title="Wat is het niet" data-background-image="img/et_phone_home.gif" data-background-opacity="0.6" -->
 
 Note: Het "Mandela-effect" is het fenomeen waarbij we iets verkeerd onthouden en waarbij die fout zo hardnekkig is, dat ze zich als een nooit bestane herinnering in onze hersenen gaat nestelen. Drew Barrymore, wie heeft haar herkend? 1982: "E.T. home phone"
 
---
+---
 
 ## Wikipedia
 
-> Human presence detection is a range of technologies and methods for detecting the presence of a human body in an area of interest (AOI), or verification that computer, smartphone (or other device controlled by software) is operated by human.
+> Connection to a data-processing system from a remote location, for example, through a remote access service or virtual private network.
 
-<p class="fragment" data-fragment-index="1">Hmm, Human Operated?</p>
-
---
-
-## Human Sensing
-
-> Human sensing (also called human detection or **human presence detection**) encompasses a range of technologies for detecting the presence of a **human body in an area** of space, typically without the intentional participation of the detected person.
+<!-- .slide: data-menu-title="Wikipedia" data-background-image="img/wikipedia.png" data-background-opacity="0.2" -->
 
 ---
 
-## Home Automation
+## Hoe dan?
 
-> "Automatiseren van processen,
-> in en om een woning"
+Remote Access kan globaal op twee manieren ...
 
-<p class="fragment" data-fragment-index="1">Event-driven orchestratie,</p>
+<p class="fragment" data-fragment-index="1">Inkomende connectie, van buiten naar binnen</p>
+<p class="fragment" data-fragment-index="1">Uitgaande connectie, van binnen naar buiten</p>
 
-<p class="fragment" data-fragment-index="1">reageren op een gebeurtenis ...</p>
-
-Note: Orchestratie of Choreografie
-
---
-
-## Events
-
-- Bewoner komt thuis.
-- Bewoner gaat weg.
-- Twee bewoners, eentje gaat weg.
-- Niemand thuis.
-- Iemand is thuis maar geen bewoner ...
-
-<p>&nbsp;</p>
-<p class="fragment" data-fragment-index="1">Verschillende events, </p>
-<p class="fragment" data-fragment-index="2">verschillende acties</p>
-
---
-
-## Event & Sensing
-
-![](img/indiana-jones-harisson-ford.gif)
-
-Wat meet een sensor?
+![](img/outside-in-of-inside-out.png)
 
 ---
 
-## Sensing
+### Inkomende connectie
 
-- Acoustic sensors
-- Image recognition of human shapes
-- Infrared detectors
-- Pressure-sensitive (floor tiles)
-- Radar
-- Chemical sensors
-- Personal device detection via Wi-Fi or Bluetooth.
+- Rechtstreeks naar je domotica systeem of
+- VPN: Wireguard, OpenVPN, PPTP, L2TP/IPSec
 
-Note: Personal device: mobieltje, of smart-watch. Waarmee/Hoe detecteren we een persoon? Light curtain (doorbreken van IR stralen)
+&nbsp;&nbsp;
 
---
-
-## Acoustic sensors:
-
-- Meet: geluid
-- Voorbeeld: Google Nest, Amazon Echo, Apple HomePod
-
-![](img/google_nest.png)
+- Nadelen:
+	- Firewall open poort naar het internet
+	- Vast IP-adres? Zoniet via DDNS ([DuckDNS](https://www.duckdns.org/)).
 
 --
 
-## Image recognition
+### Advies
+&nbsp;&nbsp;
 
-- Meet: Beeld analyse, persoon of gezicht
-- Voorbeeld: Camera bewaking, deurbel-camera
+Geen OpenVPN, poort open op internet
 
-![](img/human-presence-detection.jpg)
+VPN o.b.v. Wireguard => UTP verbinding
 
---
+&nbsp;&nbsp;
 
-## Infrared detectors
-
-- Meet: Infra-rood licht
-- Voorbeeld: PIR
-
-![](img/passive-infrared-sensor.png)
-
---
-
-## Pressure-sensitive
-
-- Meet: Verschil in druk
-- Voorbeeld: Druk-sensor onder een deurmat of onder de latten-bodem van het bed.
-
-Note: Deurmat is tijdelijk, bed voor langere duur.
-
---
-
-## Radar
-
-- Meet: Verschuiving in radio-frequentie
-- Voorbeeld: FMCW 24 GHz
-
-![](img/FMCW-24GHz.png)
-
-Note: Doppler sensor. "That guy with the Swiss accent" review, FMCW 24 GHz
-
---
-
-## Chemical sensors
-
-- Meet: Chemische samenstelling van de omgeving in gas of vloeistof.
-- Voorbeeld: CO<sub>2</sub>-sensor, rookmelder
-
-<!-- .slide: data-menu-title="Chemical sensors" data-background-image="img/rookmelder.jpg" data-background-opacity="0.3" -->
-
---
-
-## Personal device detection
-
-- Meet: Signalen van een persoonlijk device
-- Voorbeeld: Smart-watch, Smart-phone, Hals-sensor, Schoen
-
-<!-- .slide: data-menu-title="Personal device detection" data-background-image="img/map.png" data-background-opacity="0.3" -->
+Eventueel in combinatie met een DDNS service.
 
 ---
 
-## Home
+### Uitgaande connectie
+&nbsp;&nbsp;
 
-Garage & Badkamer
+- [Nabu Casa](https://www.nabucasa.com/) / [Home Assistant Cloud](https://www.nabucasa.com/)
+- [Tailscale](https://tailscale.com/) / [Headscale](https://github.com/juanfont/headscale)
+- [ZeroTier One](<[ZeroTier One](https://www.zerotier.com/)>)
+- [Twingate](https://www.twingate.com/)
 
-![](img/aquara-motion-sensor.png)
-<!-- .slide: data-menu-title="Home" data-background-image="img/home.jpg" data-background-opacity="0.2" -->
+&nbsp;&nbsp;
 
---
-
-## Garage
-
-- Sensor: Aquara motion sensor
-- Actie: Shelly zet garagelicht aan (3 min.)
-
-![](img/Shelly1.png)
+- Requirements:
+    - Afhankelijk van een "third party"
 
 --
 
-## Badkamer
+## Nabu Casa
+&nbsp;&nbsp;
 
-- Sensor: Aquara motion sensor
-- Actie: Licht gaat zachtjes aan
-
-![](img/hue-ceiling-light.png)
-
---
-
-## Home Assistant
-
-- Bewegings-sensoren via Zigbee aangestuurd via Zigbee of Wi-Fi.
-- Tot nu toe twee ruimtes:
-    - Garage en
-    - Badkamer
-- ToDo lijst:
-    - Radar sensoren voor de studeerkamer
-    - Bewegings-sensoren vervangen door Radar sensoren
+- Nabu Casa of Home Assistant Cloud
+- Geintegreerde oplossing voor HA
+- HA "sponsoring"
 
 <!-- .slide: data-menu-title="Home Assistant" data-background-image="img/homeassistant.png" data-background-opacity="0.2" -->
 
+--
+
+## Tailscale
+&nbsp;&nbsp;
+
+- Gratis tot 100 clients
+- P2P netwerk
+- Wireguard-based
+
+<!-- .slide: data-menu-title="Tailscale" data-background-image="img/tailscale-logo.png" data-background-opacity="0.2" -->
+
+--
+
+## Headscale
+&nbsp;&nbsp;
+
+- Self-hosted
+- Open source
+- Werkt met de Tailscale client
+- P2P netwerk
+- Wireguard-based
+
+<!-- .slide: data-menu-title="Tailscale" data-background-image="img/tailscale-logo.png" data-background-opacity="0.2" -->
+
+
 ---
 
-## Conclusie
+## Advies
+&nbsp;&nbsp;
 
-- Tot ziens PIR, hallo Radar
-- Snelle gewenning, veel gemak
-- Batterij maar toch liever bedraad
+- Outside-in: Wireguard
+- Inside-out: Nabu Casa of Tailscale
 
 ---
 

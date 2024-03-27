@@ -96,7 +96,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   font-weight: var(--r-heading-font-weight);
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
-  text-transform: var(--r-heading-text-transform);
+  /*text-transform: var(--r-heading-text-transform);*/
   text-shadow: var(--r-heading-text-shadow);
   word-wrap: break-word;
 }
@@ -107,10 +107,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal h2 {
   font-size: var(--r-heading2-size);
+  margin-bottom: 0.5em;
 }
 
 .reveal h3 {
   font-size: var(--r-heading3-size);
+  margin-bottom: 0.5em;
 }
 
 .reveal h4 {
