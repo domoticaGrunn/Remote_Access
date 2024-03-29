@@ -47,7 +47,7 @@ Remote Access kan globaal op twee manieren ...
 
 Geen OpenVPN, poort open op internet
 
-VPN o.b.v. Wireguard => UTP verbinding
+VPN o.b.v. Wireguard => UDP verbinding
 
 &nbsp;&nbsp;
 
