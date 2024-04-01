@@ -21,7 +21,6 @@ Note: Het "Mandela-effect" is het fenomeen waarbij we iets verkeerd onthouden en
 ## Hoe dan?
 
 Remote Access kan globaal op twee manieren ...
-
 <p class="fragment" data-fragment-index="1">Inkomende connectie, van buiten naar binnen</p>
 <p class="fragment" data-fragment-index="1">Uitgaande connectie, van binnen naar buiten</p>
 
@@ -37,13 +36,12 @@ Remote Access kan globaal op twee manieren ...
 &nbsp;&nbsp;
 
 - Nadelen:
-	- Firewall open poort naar het internet
-	- Vast IP-adres? Zoniet via DDNS ([DuckDNS](https://www.duckdns.org/)).
+  - Firewall open poort naar het internet
+  - Vast IP-adres? Zoniet via DDNS ([DuckDNS](https://www.duckdns.org/))
 
 --
 
 ### Advies
-&nbsp;&nbsp;
 
 Geen OpenVPN, poort open op internet
 
@@ -56,22 +54,21 @@ Eventueel in combinatie met een DDNS service.
 ---
 
 ### Uitgaande connectie
-&nbsp;&nbsp;
 
 - [Nabu Casa](https://www.nabucasa.com/) / [Home Assistant Cloud](https://www.nabucasa.com/)
 - [Tailscale](https://tailscale.com/) / [Headscale](https://github.com/juanfont/headscale)
-- [ZeroTier One](<[ZeroTier One](https://www.zerotier.com/)>)
+- [ZeroTier One](https://www.zerotier.com/)
 - [Twingate](https://www.twingate.com/)
 
-&nbsp;&nbsp;
+<br>
+<br>
 
 - Requirements:
-    - Afhankelijk van een "third party"
+  - Afhankelijk van een "third party"
 
 --
 
 ## Nabu Casa
-&nbsp;&nbsp;
 
 - Nabu Casa of Home Assistant Cloud
 - Geintegreerde oplossing voor HA
@@ -82,7 +79,6 @@ Eventueel in combinatie met een DDNS service.
 --
 
 ## Tailscale
-&nbsp;&nbsp;
 
 - Gratis tot 100 clients
 - P2P netwerk
@@ -93,7 +89,6 @@ Eventueel in combinatie met een DDNS service.
 --
 
 ## Headscale
-&nbsp;&nbsp;
 
 - Self-hosted
 - Open source
@@ -103,11 +98,9 @@ Eventueel in combinatie met een DDNS service.
 
 <!-- .slide: data-menu-title="Tailscale" data-background-image="img/tailscale-logo.png" data-background-opacity="0.2" -->
 
-
 ---
 
-## Advies
-&nbsp;&nbsp;
+## Adviezen
 
 - Outside-in: Wireguard
 - Inside-out: Nabu Casa of Tailscale
