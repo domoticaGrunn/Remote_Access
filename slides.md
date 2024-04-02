@@ -22,7 +22,7 @@ Note: Het "Mandela-effect" is het fenomeen waarbij we iets verkeerd onthouden en
 
 Remote Access kan globaal op twee manieren ...
 <p class="fragment" data-fragment-index="1">Inkomende connectie, van buiten naar binnen</p>
-<p class="fragment" data-fragment-index="1">Uitgaande connectie, van binnen naar buiten</p>
+<p class="fragment" data-fragment-index="2">Uitgaande connectie, van binnen naar buiten</p>
 
 ![](img/outside-in-of-inside-out.png)
 
